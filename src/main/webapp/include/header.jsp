@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp">Meow</a>
@@ -12,7 +13,14 @@
                 <a class="nav-link" href="${pageContext.request.contextPath}/addArticle.jsp">Add Meow</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="${pageContext.request.contextPath}/login.jsp">Login</a>
+                <c:choose>
+                    <c:when test="${sessionScope.user == null}">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/login.jsp">Login</a>
+                    </c:when>
+                    <c:otherwise>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/logout">Logout</a>
+                    </c:otherwise>
+                </c:choose>
             </li>
         </ul>
     </div>
