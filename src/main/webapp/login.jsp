@@ -4,13 +4,13 @@
 <html lang="en">
 <head>
     <jsp:include page="/include/meta.jsp"/>
+    <link href="${pageContext.request.contextPath}/css/sign-in.css" rel="stylesheet">
     <title>Meowter: login</title>
 </head>
 
 <body>
 <header>
     <jsp:include page="include/header.jsp"/>
-    <link href="${pageContext.request.contextPath}/css/sign-in.css" rel="stylesheet">
 </header>
 
 <main role="main" class="text-center">
@@ -25,7 +25,7 @@
     </form>
 </main>
 
-<footer class="footer-add">
+<footer>
     <jsp:include page="include/footer.jsp"/>
 </footer>
 
