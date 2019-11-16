@@ -6,6 +6,10 @@ import org.hibernate.cfg.Configuration;
 public class HibernateUtil {
 
     private static final SessionFactory sessionFactory = buildSessionFactory();
+    private static final String USERNAME = "hibernate.connection.username";
+    private static final String PASSWORD = "hibernate.connection.password";
+    private static final String URL = "hibernate.connection.url";
+
 
     private static SessionFactory buildSessionFactory() {
         try {
@@ -19,7 +23,9 @@ public class HibernateUtil {
 //
 //            return metadata.getSessionFactoryBuilder().build();
 
-            return new Configuration()
+            return new Configuration().setProperty(USERNAME, getVariable(USERNAME))
+                    .setProperty(PASSWORD, getVariable(PASSWORD))
+                    .setProperty(URL, getVariable(URL) + getVariable(USERNAME))
                     .configure()
                     .buildSessionFactory();
 
@@ -35,6 +41,10 @@ public class HibernateUtil {
 
     public static void shutDown() {
         getSessionFactory().close();
+    }
+
+    public static String getVariable(String key) {
+        return System.getenv(key.replace(".", "_"));
     }
 
 }

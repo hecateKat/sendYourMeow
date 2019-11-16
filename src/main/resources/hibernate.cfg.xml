@@ -6,9 +6,9 @@
     <session-factory>
         <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.username">P9KcoGTCxc</property>
-        <property name="hibernate.connection.password">iY4GkyTV3I</property>
-        <property name="hibernate.connection.url">jdbc:mysql://remotemysql.com:3306/P9KcoGTCxc</property>
+        <!--        <property name="hibernate.connection.username">P9KcoGTCxc</property>-->
+        <!--        <property name="hibernate.connection.password">iY4GkyTV3I</property>-->
+        <!--        <property name="hibernate.connection.url">jdbc:mysql://remotemysql.com:3306/P9KcoGTCxc</property>-->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
         <mapping class="com.kat.meowter.persistance.entities.TbUser"/>
