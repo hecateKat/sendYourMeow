@@ -1,5 +1,6 @@
 package com.kat.persistance.entities;
 
+import com.google.gson.annotations.Expose;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -14,13 +15,17 @@ public class TbArticle implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "AR_ID")
+    @Expose
     private int id;
 
     @JoinColumn(name = "AR_USER_ID", nullable = false)
     @ManyToOne
+    @Expose
     private TbUser user;
 
+
     @Column(name = "AR_CONTENT")
+    @Expose
     private String content;
 
 }
