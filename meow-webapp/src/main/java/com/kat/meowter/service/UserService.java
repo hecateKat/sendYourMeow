@@ -1,8 +1,8 @@
 package com.kat.meowter.service;
 
 import com.kat.meowter.exception.IncorrectLoginOrPassword;
-import com.kat.meowter.persistance.dao.UserDao;
-import com.kat.meowter.persistance.entities.TbUser;
+import com.kat.persistance.dao.UserDao;
+import com.kat.persistance.entities.TbUser;
 
 import javax.persistence.NoResultException;
 import javax.persistence.NonUniqueResultException;

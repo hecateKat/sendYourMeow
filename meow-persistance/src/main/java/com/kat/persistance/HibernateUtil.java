@@ -1,7 +1,9 @@
-package com.kat.meowter.persistance;
+package com.kat.persistance;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import static com.kat.persistance.entities.EnvironmentVariableUtil.getVariable;
 
 public class HibernateUtil {
 
@@ -12,6 +14,8 @@ public class HibernateUtil {
 
 
     private static SessionFactory buildSessionFactory() {
+
+
         try {
 //            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 //                                                    .configure("hibernate.cfg.xml")
@@ -41,10 +45,6 @@ public class HibernateUtil {
 
     public static void shutDown() {
         getSessionFactory().close();
-    }
-
-    public static String getVariable(String key) {
-        return System.getenv(key.replace(".", "_"));
     }
 
 }

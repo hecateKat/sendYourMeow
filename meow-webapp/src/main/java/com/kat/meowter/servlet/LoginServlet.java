@@ -1,8 +1,8 @@
 package com.kat.meowter.servlet;
 
 import com.kat.meowter.exception.IncorrectLoginOrPassword;
-import com.kat.meowter.persistance.entities.TbUser;
 import com.kat.meowter.service.UserService;
+import com.kat.persistance.entities.TbUser;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

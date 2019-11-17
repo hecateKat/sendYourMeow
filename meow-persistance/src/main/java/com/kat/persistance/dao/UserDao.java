@@ -1,7 +1,7 @@
-package com.kat.meowter.persistance.dao;
+package com.kat.persistance.dao;
 
-import com.kat.meowter.persistance.HibernateUtil;
-import com.kat.meowter.persistance.entities.TbUser;
+import com.kat.persistance.HibernateUtil;
+import com.kat.persistance.entities.TbUser;
 import org.hibernate.HibernateError;
 import org.hibernate.NonUniqueObjectException;
 import org.hibernate.Session;

@@ -27,6 +27,7 @@
         <module>
             meow-webapp
         </module>
+        <module>meow-persistance</module>
     </modules>
 
     <properties>
@@ -34,7 +35,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-
+    <dependencyManagement>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
         <dependency>
@@ -75,5 +76,6 @@
             <version>2.8.6</version>
         </dependency>
     </dependencies>
+    </dependencyManagement>
 
 </project>

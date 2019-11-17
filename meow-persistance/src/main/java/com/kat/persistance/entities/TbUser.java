@@ -1,4 +1,4 @@
-package com.kat.meowter.persistance.entities;
+package com.kat.persistance.entities;
 
 import lombok.Data;
 
